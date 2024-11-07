@@ -1,6 +1,6 @@
 {
   "name": "wibu-cli",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Simple Wibu cli app",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "rm -rf dist && tsc && standard-version",
+    "dev": "tsc --watch",
     "clean": "rm -rf dist",
     "test": "echo 'Add your test script here'",
     "gen": "npx tsx ./lib/gen.ts"
@@ -35,7 +36,9 @@
   },
   "dependencies": {
     "app-root-path": "^3.1.0",
+    "dedent": "^1.5.3",
     "directory-import": "^3.3.1",
+    "loading-cli": "^1.1.2",
     "readdirp": "^4.0.2"
   }
 }
