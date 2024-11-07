@@ -1,0 +1,36 @@
+{
+  "name": "wibu-cli",
+  "version": "1.0.0",
+  "description": "Simple Wibu cli app",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "wibu-cli": "bin/wibu-cli.js"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc && standard-version",
+    "clean": "rm -rf dist",
+    "test": "echo 'Add your test script here'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/wibu-pkg.git"
+  },
+  "keywords": [
+    "typescript",
+    "utilities",
+    "package"
+  ],
+  "author": "Malik Kurosaki",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^5"
+  },
+  "dependencies": {}
+}
