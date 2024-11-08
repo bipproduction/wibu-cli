@@ -46,7 +46,7 @@ async function summarizeText(text: string) {
   );
 
   const result: any = await summarizer(text);
-
   const summary = result[0]["summary_text"];
   return summary;
 }
+
