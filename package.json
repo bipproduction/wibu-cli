@@ -1,6 +1,6 @@
 {
   "name": "wibu-cli",
-  "version": "1.0.66",
+  "version": "1.0.67",
   "description": "Simple Wibu cli app",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
