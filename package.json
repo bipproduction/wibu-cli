@@ -1,6 +1,6 @@
 {
   "name": "wibu-cli",
-  "version": "1.0.75",
+  "version": "1.0.76",
   "description": "Simple Wibu cli app",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -37,6 +37,7 @@
   "dependencies": {
     "@huggingface/transformers": "^3.0.2",
     "@types/lodash": "^4.17.13",
+    "@types/web-push": "^3.6.4",
     "app-root-path": "^3.1.0",
     "dedent": "^1.5.3",
     "directory-import": "^3.3.1",
@@ -44,6 +45,7 @@
     "json-to-ts": "^2.1.0",
     "loading-cli": "^1.1.2",
     "lodash": "^4.17.21",
-    "readdirp": "^4.0.2"
+    "readdirp": "^4.0.2",
+    "web-push": "^3.6.7"
   }
 }
