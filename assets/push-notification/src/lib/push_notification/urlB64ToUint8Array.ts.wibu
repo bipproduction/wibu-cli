@@ -11,4 +11,4 @@ export const urlB64ToUint8Array = (base64String: string) => {
     return outputArray;
   };
   
-// wibu:1.0.81
+// wibu:1.0.87

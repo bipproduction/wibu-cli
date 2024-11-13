@@ -8,4 +8,4 @@ export type WibuConfig = {
   validationApiRoute: string;
 };
 
-// wibu:1.0.81
+// wibu:1.0.87

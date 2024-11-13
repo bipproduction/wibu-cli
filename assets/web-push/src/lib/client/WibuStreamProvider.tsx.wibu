@@ -53,4 +53,4 @@ export function WibuStreamProvider() {
   return null;
 }
 
-// wibu:1.0.81
+// wibu:1.0.87

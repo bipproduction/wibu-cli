@@ -40,4 +40,4 @@ export async function POST(req: Request) {
   return new Response(JSON.stringify({ data: create }));
 }
 
-// wibu:1.0.81
+// wibu:1.0.87

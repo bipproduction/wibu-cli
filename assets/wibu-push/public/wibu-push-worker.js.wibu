@@ -1,7 +1,3 @@
-// /**
-//  * @typedef {import('../src/types/PushNotificationDataSend').PushNotificationDataSend} PushNotificationDataSend
-//  */
-
 const log = false;  // Ganti ke true untuk debugging
 function printLog(text) {
     if (log) {
@@ -121,3 +117,5 @@ self.addEventListener('notificationclick', function (event) {
         })
     );
 });
+
+// wibu:1.0.87
