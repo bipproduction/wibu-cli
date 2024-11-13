@@ -7,7 +7,7 @@ import loading from "loading-cli";
 
 const rootTypes = path.join(process.cwd(), "src/types");
 
-export async function main(pathSource: string, fileName?: string) {
+export async function generate(pathSource: string, fileName?: string) {
   const log = loading("loading ...").start();
 
   try {

@@ -10,35 +10,34 @@ const envServerText = dedent`
     import { Envs } from "@/types/Envs";
 
     export class EnvServer {
-      static env: Envs;
-      static init(env: Envs) {
+      static env: Envs | NodeJS.ProcessEnv;
+      static init(env: Envs | NodeJS.ProcessEnv) {
         this.env = env;
       }
     }
   `;
 
 const envClientClass = dedent`
-    "use client";
-    import { Envs } from "@/types/Envs";
-    export class EnvClient {
-      static env: Envs;
-      static init(env: Envs) {
-        this.env = env;
-      }
+ "use client";
+  import { Envs } from "@/types/Envs";
+  export class EnvClient {
+    static env: Envs | NodeJS.ProcessEnv;
+    static init(env: Envs | NodeJS.ProcessEnv) {
+      this.env = env;
     }
+  }
 
-    export function EnvClientProvider({ env }: { env: string }) {
-      try {
-        const jsonEnv = JSON.parse(env)
-        EnvClient.init(jsonEnv);
-      } catch (error) {
-        console.log(error);
-      }
-      return null;
+  export function EnvClientProvider({ env }: { env: string }) {
+    try {
+      EnvClient.init(JSON.parse(env));
+    } catch (error) {
+      console.log(error);
     }
+    return null;
+  }
   `;
 
-export async function main() {
+export async function generate() {
   let hasEnvFile = false;
   try {
     await fs.statfs(path.join(root, ".env"));

@@ -19,7 +19,7 @@ export default prisma
 
 if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = prisma
 `;
-export async function main() {
+export async function install() {
   await fs.mkdir(rootDir, { recursive: true });
   await fs.writeFile(path.join(rootDir, "prisma.ts"), text, "utf8");
   console.log("prisma generated", path.join(rootDir, "prisma.ts"));

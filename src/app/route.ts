@@ -6,7 +6,7 @@ import readdirp, { EntryInfo } from "readdirp";
 import util from "util";
 const execPromise = util.promisify(exec);
 
-export async function main() {
+export async function generate() {
   await fs.mkdir(path.join(process.cwd(), "src/lib"), { recursive: true });
   const pages: string[] = [];
   const apies: string[] = [];

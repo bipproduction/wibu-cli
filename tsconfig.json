@@ -7,8 +7,8 @@
       "strict": true,
       "esModuleInterop": true,
       "declaration": true,
-      "outDir": "./dist",
-      "rootDir": "./src",
+      "outDir": "dist",
+      "rootDir": "src",
       "skipLibCheck": true,
       "resolveJsonModule": true
     },

@@ -8,6 +8,8 @@ src/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lib/
+tsconfig.json
 
 # Include the necessary files only
 !.npmignore
@@ -15,3 +17,7 @@ yarn-error.log*
 !README.md
 !LICENSE
 !package.json
+
+# Sertakan seluruh isi folder `assets`, termasuk subfolder `src` di dalamnya
+!assets/
+!assets/**

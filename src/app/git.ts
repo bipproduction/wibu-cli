@@ -5,27 +5,28 @@ import path from "path";
 import os from "os";
 
 const execPromise = util.promisify(exec);
-export async function main() {
+export async function push() {
   const currentBranch = await execPromise("git branch --show-current");
   const branchName = currentBranch.stdout.trim();
-  let { stdout } = await execPromise(
-    "git diff --stat --unified=1 --ignore-space-change --diff-filter=ACMRT && git status"
-  );
-  stdout = stdout.substring(0, 2000);
-  const tmpFilePath = path.join(os.tmpdir(), `commit_message.txt`);
+  // let { stdout } = await execPromise(
+  //   "git diff --stat --unified=1 --ignore-space-change --diff-filter=ACMRT && git status"
+  // );
+  // stdout = stdout.substring(0, 2000);
+  // const tmpFilePath = path.join(os.tmpdir(), `commit_message.txt`);
 
-  const text = await summarizeText(stdout);
-  await fs.writeFile(tmpFilePath, text);
+  // const text = await summarizeText(stdout);
+  // await fs.writeFile(tmpFilePath, text);
   await execPromise(
-    `git add -A && git commit --file="${tmpFilePath}" && git push origin ${branchName}`
+    `git add -A && git commit -m="auto push wibu-cli" && git push origin ${branchName}`
   );
+  console.log("Push success");
 
-  try {
-    await fs.access(tmpFilePath); // Check if the file exists
-    await fs.unlink(tmpFilePath); // Asynchronously delete the file
-  } catch (err: any) {
-    console.log("Error deleting file:", err);
-  }
+  // try {
+  //   await fs.access(tmpFilePath); // Check if the file exists
+  //   await fs.unlink(tmpFilePath); // Asynchronously delete the file
+  // } catch (err: any) {
+  //   console.log("Error deleting file:", err);
+  // }
 }
 
 async function summarizeText(text: string) {

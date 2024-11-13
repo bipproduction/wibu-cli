@@ -4,4 +4,4 @@ export type JSonDataSendNotification = {
   sub?: PushSubscription;
 };
 
-// wibu:0.2.82
+// wibu:1.0.81
